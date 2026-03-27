@@ -1,0 +1,7 @@
+---
+title: '550 Final: M Cubed'
+author: "Mele Mafi"
+output: github_document
+---
+
+# Report created
