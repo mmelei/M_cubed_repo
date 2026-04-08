@@ -9,6 +9,11 @@ output/table_one.rds: data/M_Cubed_Cohort.csv
 
 output/survival_curve.png: data/M_Cubed_Cohort.csv
 	Rscript code/02_figure_1.R
+
+
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt = FALSE)"
 	
 .PHONY: clean
 clean:
