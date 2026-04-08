@@ -11,3 +11,7 @@ output: github_document
 2. Navigate to the correct directory: cd M_cubed_repo
 
 3. Run the "make" command
+
+code/01_table_1.R creates table 1
+
+code/02_figure_1.R creates table 1
