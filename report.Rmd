@@ -4,7 +4,10 @@ author: "Mele Mafi"
 output: html_document
 ---
 
-```{r, here-i-am}
+```{r, here-i-am, echo=FALSE, message=FALSE, warning=FALSE}
+library(here)
+library(tidyverse)
+
 here::i_am(
   "report.Rmd"
 )
@@ -12,7 +15,7 @@ here::i_am(
 
 **Introduction**
 
-These data come from Emory's CDC funded [M-cubed](https://pmc.ncbi.nlm.nih.gov/articles/PMC6884718/) control trial. 1,226 GBMSM were included in this study with a random subset being assigned to the app intervention intended to encourage positive sexual health practices related to prevention and treatment of HIV. Survey data exist at baseline with 3 follow-up surveys occurring approximately every 3 months after that. For my project, I have subset a group of 374 participants that are non PrEP utilizing at baseline and that would benefit from PrEP use (HIV sernegative, risky sex behaviors, partner with HIV seropositive or unknown status, recent bacterial STI, etc.). Here, I compare incident PrEP uptake by various variables with the objective of understanding differences between incident and non-incident PrEP participants and assess the strength in relationships between theoretical behavior indicators (specifically a measure for behavior motivation) and PrEP uptake. 
+These data come from Emory's CDC funded [M-cubed](https://pmc.ncbi.nlm.nih.gov/articles/PMC6884718/) control trial. 1,226 GBMSM were included in this study with a random subset being assigned to the app intervention intended to encourage positive sexual health practices related to prevention and treatment of HIV. Survey data exist at baseline with 3 follow-up surveys occurring approximately every 3 months after that. For my project, I have subset a group of 360 participants that are non PrEP utilizing at baseline and that would benefit from PrEP use (HIV sernegative, risky sex behaviors, partner with HIV seropositive or unknown status, recent bacterial STI, etc.). Here, I compare incident PrEP uptake by various variables with the objective of understanding differences between incident and non-incident PrEP participants and assess the strength in relationships between theoretical behavior indicators (specifically a measure for behavior motivation) and PrEP uptake. 
 
 
 **Table 1 Description**
@@ -21,7 +24,7 @@ These data come from Emory's CDC funded [M-cubed](https://pmc.ncbi.nlm.nih.gov/a
 The following table 1 describes participant characteristics at baseline and compares those characteristics by incident PrEP use through the follow-up duration. The first part of the table compares demographic characteristics by PrEP initiation status and the last half assesses differences by behavior indicators relating to the information, motivation, and behavioral skills (IMB) model. 
 
 
-```{r, table1}
+```{r, table1, echo=FALSE}
 readRDS(
   file = here::here("output/table_one.rds")
 )
@@ -34,7 +37,7 @@ readRDS(
 The following figure depicts unadjusted cumulative probability curves illustrating the probability of initiating PrEP by self-reported perception of PrEP efficacy over time. 
 
 
-```{r, plot-data, fig.align = "center", out.width = "600px"}
+```{r, plot-data, fig.align = "center", out.width = "600px", echo=FALSE}
 
 knitr::include_graphics(
   here::here("output/survival_curve.png")
